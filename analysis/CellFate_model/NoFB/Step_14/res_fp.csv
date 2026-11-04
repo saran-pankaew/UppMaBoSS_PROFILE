@@ -1,0 +1,16 @@
+Fixed Points (14)
+FP	Proba	State	FASL	TNF	TNFR	FADD	DISC_TNF	DISC_FAS	CASP8	RIP1	cIAP	RIP1ub	RIP1K	IKK	CASP3	NFkB	cFLIP	BCL2	BAX	mROS	MPT	ROS	ATP	MOMP	SMAC	mcIAP	Cyt_c	mXIAP	XIAP	apoptosome	NonACD	Apoptosis	Division	Survival	Death
+#1	1e-05	FADD -- CASP8 -- CASP3 -- BAX -- mROS -- ATP -- MOMP -- SMAC -- Cyt_c -- apoptosome -- Apoptosis -- Division -- Death	0	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0	1	1	0	0	1	1	1	0	1	0	0	1	0	1	1	0	1
+#2	1e-05	FADD -- mROS -- ATP -- Division	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0
+#3	0.10485	FADD -- cIAP -- mROS -- ATP	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+#4	0.00146	mROS -- MPT -- ROS -- MOMP -- SMAC -- Cyt_c -- NonACD -- Death	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	1	0	1	1	0	1	0	0	0	1	0	0	0	1
+#5	1e-05	CASP8 -- CASP3 -- BAX -- mROS -- ATP -- MOMP -- SMAC -- Cyt_c -- apoptosome -- Apoptosis -- Death	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	1	1	0	0	1	1	1	0	1	0	0	1	0	1	0	0	1
+#6	6e-05	FADD -- cIAP -- mROS -- ATP -- Division	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0
+#7	1e-05	CASP8 -- CASP3 -- BAX -- mROS -- ATP -- MOMP -- SMAC -- Cyt_c -- apoptosome -- Apoptosis -- Division -- Death	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	1	1	0	0	1	1	1	0	1	0	0	1	0	1	1	0	1
+#8	3e-05	FADD -- mROS -- ATP -- Death	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	0	0	1
+#9	0.00365	FADD -- CASP8 -- CASP3 -- BAX -- mROS -- ATP -- MOMP -- SMAC -- Cyt_c -- apoptosome -- Apoptosis -- Death	0	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0	1	1	0	0	1	1	1	0	1	0	0	1	0	1	0	0	1
+#10	0.00033	FADD -- mROS -- MPT -- ROS -- MOMP -- SMAC -- Cyt_c -- NonACD -- Death	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	1	0	1	1	0	1	0	0	0	1	0	0	0	1
+#11	0.00015	cIAP -- mROS -- ATP -- Division	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0
+#12	0.13882	cIAP -- mROS -- ATP	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+#13	0.08641	FADD -- mROS -- ATP	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+#14	0.09817	mROS -- ATP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0

@@ -1,0 +1,16 @@
+Fixed Points (14)
+FP	Proba	State	FASL	TNF	TNFR	FADD	DISC_TNF	DISC_FAS	CASP8	RIP1	cIAP	RIP1ub	RIP1K	IKK	CASP3	NFkB	cFLIP	BCL2	BAX	mROS	MPT	ROS	ATP	MOMP	SMAC	mcIAP	Cyt_c	mXIAP	XIAP	apoptosome	NonACD	Apoptosis	Division	Survival	Death
+#1	2e-05	mROS -- ATP -- Death	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	0	0	1
+#2	2e-05	FADD -- cIAP -- mROS -- ATP -- Division	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0
+#3	1e-05	cIAP -- mROS -- ATP -- Death	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	0	0	1
+#4	1e-05	FADD -- mROS -- MPT -- ROS -- MOMP -- SMAC -- Cyt_c -- NonACD -- Division -- Death	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	1	0	1	1	0	1	0	0	0	1	0	1	0	1
+#5	0.0777	FADD -- cIAP -- mROS -- ATP	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+#6	0.00502	mROS -- MPT -- ROS -- MOMP -- SMAC -- Cyt_c -- NonACD -- Death	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	1	0	1	1	0	1	0	0	0	1	0	0	0	1
+#7	4e-05	CASP8 -- CASP3 -- BAX -- mROS -- ATP -- MOMP -- SMAC -- Cyt_c -- apoptosome -- Apoptosis -- Death	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	1	1	0	0	1	1	1	0	1	0	0	1	0	1	0	0	1
+#8	0.00013	FADD -- mROS -- ATP -- Death	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	0	0	1
+#9	0.00926	FADD -- CASP8 -- CASP3 -- BAX -- mROS -- ATP -- MOMP -- SMAC -- Cyt_c -- apoptosome -- Apoptosis -- Death	0	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0	1	1	0	0	1	1	1	0	1	0	0	1	0	1	0	0	1
+#10	0.00177	FADD -- mROS -- MPT -- ROS -- MOMP -- SMAC -- Cyt_c -- NonACD -- Death	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	1	0	1	1	0	1	0	0	0	1	0	0	0	1
+#11	6e-05	cIAP -- mROS -- ATP -- Division	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0
+#12	0.06955	mROS -- ATP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+#13	0.09333	cIAP -- mROS -- ATP	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+#14	0.06137	FADD -- mROS -- ATP	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0

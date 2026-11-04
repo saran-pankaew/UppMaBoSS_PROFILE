@@ -1,0 +1,8 @@
+Trajectory	State	Proba
+#1	<nil>	1
+
+Trajectory[cluster=#1,size=1]	State	Proba	State	Proba	State	Proba	State	Proba ...
+#1	<nil>	1
+
+Cluster	State	Proba	ErrorProba	State	Proba	ErrorProba	State	Proba	ErrorProba	State	Proba	ErrorProba...
+#1	<nil>	1	0

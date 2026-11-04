@@ -1,0 +1,231 @@
+
+-------------------------------------------------- Run --------------------------------------------------
+MaBoSS version: 2.6.6 [networks up to 64 nodes]
+
+Run start time: Tue Nov  3 18:15:28 2026
+Run end time: Tue Nov  3 18:15:28 2026
+
+Core user runtime: 0.88 secs using 8 threads
+Core elapsed runtime: 0.123 secs using 8 threads
+
+Epilogue user runtime: 0.06 secs using 1 thread
+Epilogue elapsed runtime: 0.031 secs using 1 thread
+
+StatDist user runtime: 0 secs using 1 thread
+StatDist elapsed runtime: 0 secs using 1 thread
+
+Time Tick: 0.1
+Max Time: 1
+Sample Count: 100000
+StatDist Trajectory Count: 1
+StatDist Similarity Cache Maximum Size: 20000
+Discrete Time: FALSE
+Random Generator: rand48
+Seed Pseudo Random: 10
+Output nodes: FASL TNF TNFR FADD DISC_TNF DISC_FAS CASP8 RIP1 cIAP RIP1ub RIP1K IKK CASP3 NFkB cFLIP BCL2 BAX mROS MPT ROS ATP MOMP SMAC mcIAP Cyt_c mXIAP XIAP apoptosome NonACD Apoptosis Division Survival Death 
+Generated Number Count: 446910
+
+---------------------------------------------------------------------------------------------------------
+
+------------------------------------------------ Network ------------------------------------------------
+node FASL {
+  rate_up = 0;
+  rate_down = 0;
+}
+
+node TNF {
+  rate_up = $TNF_induc;
+  rate_down = $Degr_TNF;
+}
+
+node TNFR {
+  logic = TNF;
+  rate_up = (@logic ? 1 : 0);
+  rate_down = (@logic ? 0 : 1);
+}
+
+node FADD {
+  rate_up = 0;
+  rate_down = 0;
+}
+
+node DISC_TNF {
+  logic = (FADD AND TNFR);
+  rate_up = (@logic ? 1 : 0);
+  rate_down = (@logic ? 0 : 1);
+}
+
+node DISC_FAS {
+  logic = (FASL AND FADD);
+  rate_up = (@logic ? 1 : 0);
+  rate_down = (@logic ? 0 : 1);
+}
+
+node CASP8 {
+  logic = (((DISC_TNF OR ((DISC_FAS OR CASP3)))) AND (NOT cFLIP));
+  rate_up = (@logic ? 1 : 0);
+  rate_down = (@logic ? 0 : 1);
+}
+
+node RIP1 {
+  logic = (((DISC_FAS OR TNFR)) AND (NOT CASP8));
+  rate_up = ((@logic ? 1 : 0));
+  rate_down = ((@logic ? 0 : 1));
+}
+
+node cIAP {
+  rate_up = (((mcIAP AND (NOT SMAC))) ? 1 : 0);
+  rate_down = (((SMAC) ? 1 : 0));
+}
+
+node RIP1ub {
+  logic = (cIAP AND RIP1);
+  rate_up = (@logic ? 1 : 0);
+  rate_down = (@logic ? 0 : 1);
+}
+
+node RIP1K {
+  logic = RIP1;
+  rate_up = (@logic ? 1 : 0);
+  rate_down = (@logic ? 0 : 1);
+}
+
+node IKK {
+  logic = RIP1ub;
+  rate_up = (@logic ? 1 : 0);
+  rate_down = (@logic ? 0 : 1);
+}
+
+node CASP3 {
+  logic = (apoptosome AND (NOT XIAP));
+  rate_up = (@logic ? 1 : 0);
+  rate_down = (@logic ? 0 : 1);
+}
+
+node NFkB {
+  logic = (IKK AND (NOT CASP3));
+  rate_up = (@logic ? 1 : 0);
+  rate_down = (@logic ? 0 : 1);
+}
+
+node cFLIP {
+  logic = NFkB;
+  rate_up = ((@logic) ? $TransRate : 0);
+  rate_down = ((@logic ? 0 : 1));
+}
+
+node BCL2 {
+  logic = NFkB;
+  rate_up = ((@logic ? $TransRate : 0));
+  rate_down = (@logic ? 0 : 1);
+}
+
+node BAX {
+  logic = (CASP8 AND (NOT BCL2));
+  rate_up = (@logic ? 1 : 0);
+  rate_down = (@logic ? 0 : 1);
+}
+
+node mROS {
+  logic = (NOT NFkB);
+  rate_up = (@logic ? $TransRate : 0);
+  rate_down = (@logic ? 0 : 1);
+}
+
+node MPT {
+  logic = ((NOT BCL2) AND ROS);
+  rate_up = (@logic ? 1 : 0);
+  rate_down = (@logic ? 0 : 1);
+}
+
+node ROS {
+  logic = ((mROS) AND ((MPT OR RIP1K)));
+  rate_up = (@logic ? 1 : 0);
+  rate_down = (@logic ? 0 : 1);
+}
+
+node ATP {
+  logic = NOT MPT;
+  rate_up = (@logic ? 1 : 0);
+  rate_down = (@logic ? 0 : 1);
+}
+
+node MOMP {
+  logic = (BAX OR MPT);
+  rate_up = (@logic ? 1 : 0);
+  rate_down = (@logic ? 0 : 1);
+}
+
+node SMAC {
+  logic = MOMP;
+  rate_up = (@logic ? 1 : 0);
+  rate_down = (@logic ? 0 : 1);
+}
+
+node mcIAP {
+  logic = (NFkB);
+  rate_up = (@logic ? $TransRate : 0);
+  rate_down = (@logic ? 0 : 1);
+}
+
+node Cyt_c {
+  logic = MOMP;
+  rate_up = (@logic ? 1 : 0);
+  rate_down = (@logic ? 0 : 1);
+}
+
+node mXIAP {
+  logic = (NFkB);
+  rate_up = (@logic ? $TransRate : 0);
+  rate_down = (@logic ? 0 : 1);
+}
+
+node XIAP {
+  logic = ((NOT SMAC) AND mXIAP);
+  rate_up = ((@logic) ? 1 : 0);
+  rate_down = ((@logic ? 0 : 1));
+}
+
+node apoptosome {
+  logic = (Cyt_c AND ((ATP AND (NOT XIAP))));
+  rate_up = ((@logic) ? 1 : 0);
+  rate_down = ((@logic ? 0 : 1));
+}
+
+node NonACD {
+  logic = NOT ATP;
+  rate_up = (@logic ? 1 : 0);
+  rate_down = (@logic ? 0 : 1);
+}
+
+node Apoptosis {
+  logic = CASP3;
+  rate_up = (@logic ? 1 : 0);
+  rate_down = (@logic ? 0 : 1);
+}
+
+node Division {
+  rate_up = (Survival ? $DivRate : 0);
+  rate_down = 0;
+}
+
+node Survival {
+  logic = NFkB;
+  rate_up = (@logic ? $TransRate : 0);
+  rate_down = (Division ? (1e+300) : 0);
+}
+
+node Death {
+  rate_up = (((NonACD OR Apoptosis)) ? 1 : 0);
+  rate_down = 0;
+}
+---------------------------------------------------------------------------------------------------------
+
+----------------------------------------------- Variables -----------------------------------------------
+$Degr_TNF = 0.166667;
+$DivRate = 0.0416667;
+$ProdTNF_NFkB = 1;
+$TNF_induc = 0.233104;
+$TransRate = 0.0416667;
+---------------------------------------------------------------------------------------------------------
+
